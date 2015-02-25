@@ -12,7 +12,7 @@ var ENCODINGS_ENUM = ["ascii", "utf8", "utf16le", "ucs2", "base64", "binary", "h
 /**
  *
  * @param {String} key
- * @returns {{setInputEncoding: setInputEncoding, setOutputEncoding: setOutputEncoding, setEncryptionKey: setEncryptionKey, setCipherAlgorithm: setCipherAlgorithm, encrypt: encrypt, decrypt: decrypt}}
+ * @returns {{setInputEncoding: Function, setOutputEncoding: Function, setEncryptionKey: Function, setCipherAlgorithm: Function, encrypt: Function, decrypt: Function}}
  */
 module.exports = function(key) {
 
@@ -126,6 +126,10 @@ module.exports = function(key) {
 
         if (!_encryptionKey) {
             throw new Error("missing encryption key. This can be set using 'setEncryptionKey()'")
+        }
+
+        if (typeof string !== "string") {
+            throw new Error("Input must be a string");
         }
 
         if ( !string ) {
