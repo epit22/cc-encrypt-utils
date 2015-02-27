@@ -128,13 +128,14 @@ module.exports = function(key) {
             throw new Error("missing encryption key. This can be set using 'setEncryptionKey()'")
         }
 
+        if ( !string ) {
+            return string;
+        }
+
         if (typeof string !== "string") {
             throw new Error("Input must be a string");
         }
 
-        if ( !string ) {
-            return string;
-        }
         var buff = new Buffer(string, _outputEncoding);
         var decipher = crypto.createDecipher(_algo, _encryptionKey);
         decipher.write(buff);
