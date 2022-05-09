@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/clevercanary/cc-encrypt-utils.git"
+    "url": "https://github.com/epit22/cc-encrypt-utils.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/clevercanary/cc-encrypt-utils/issues"
+    "url": "https://github.com/epit22/cc-encrypt-utils/issues"
   },
-  "homepage": "https://github.com/clevercanary/cc-encrypt-utils",
+  "homepage": "https://github.com/epit22/cc-encrypt-utils",
   "dependencies": {
     "lodash": "^3.3.0"
   },
